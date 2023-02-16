@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] float speed = 5f;
+    [SerializeField] float rotationSpeed = 5f;
     [SerializeField] float jumpForce = 5f;
     [SerializeField] Rigidbody rb;
     [SerializeField] LayerMask groundMask;
@@ -40,6 +41,14 @@ public class PlayerController : MonoBehaviour
         velocity.y = rb.velocity.y;
         //transform.position = transform.position + playerMovement;
 
+        if(velocity != Vector3.zero)
+        {
+            Quaternion toRotation = Quaternion.LookRotation(velocity, Vector3.up);
+
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
+        }
+
+
         //Applico la traslazione
         //transform.Translate(playerMovement, Space.World);
 
@@ -56,14 +65,16 @@ public class PlayerController : MonoBehaviour
 
         Debug.DrawRay(transform.position, -transform.up * 10, Color.red);
 
-        RaycastHit hit;
-        if(Physics.Raycast(transform.position, -transform.up, out hit, 10, groundMask))
-        {
-            Debug.Log("Colpito");
-        }
+        //RaycastHit hit;
+       // if(Physics.Raycast(transform.position, -transform.up, out hit, 10, groundMask))
+       // {
+            //Debug.Log("Colpito");
+       // }
 
         //Physics.SphereCast
         //Physics.OverlapSphere
+
+        
     }
 
    
