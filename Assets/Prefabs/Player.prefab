@@ -280,9 +280,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6962409562861274986}
-  - component: {fileID: 5121841527240438754}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: spawn torte
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -295,25 +294,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2247303664287467555}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.02, y: -0.04, z: 0.316}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -1.03, y: 2.66, z: 1.39}
   m_LocalScale: {x: 3.398367, y: 3.5817902, z: 1.804696}
   m_Children: []
   m_Father: {fileID: 4060462867287420173}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5121841527240438754
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2247303664287467555}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c6e5c3f6d10da0409c792c6b1a98bb1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &2411085288832372566
 GameObject:
   m_ObjectHideFlags: 0
@@ -504,8 +491,9 @@ GameObject:
   - component: {fileID: 244402649817643825}
   - component: {fileID: 3561354239959209770}
   - component: {fileID: 6452428845705726762}
+  - component: {fileID: 1385936636564107292}
   m_Layer: 0
-  m_Name: Cube (2)
+  m_Name: LanciaTorte
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -588,3 +576,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1385936636564107292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6949588351072991678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c6e5c3f6d10da0409c792c6b1a98bb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletSpawnPoint: {fileID: 6962409562861274986}
+  tortaPrefab: {fileID: 8490944683416632386, guid: d823ef4f6ce05b641b7b56771671c128, type: 3}
+  bulletspeed: 20
