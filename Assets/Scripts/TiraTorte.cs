@@ -13,9 +13,9 @@ public class TiraTorte : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.O))
         {
-            Debug.Log("Input Ricevuto");
+            
             var torta = Instantiate(tortaPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
-            torta.GetComponent<Rigidbody>().velocity = bulletSpawnPoint.up * bulletspeed;
+            torta.GetComponent<Rigidbody>().velocity = bulletSpawnPoint.forward * bulletspeed;
         } 
     }
 }

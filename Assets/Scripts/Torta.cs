@@ -15,7 +15,8 @@ public class Torta : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
 
-    { 
+    {
+        
         Destroy(gameObject);
     }
 }

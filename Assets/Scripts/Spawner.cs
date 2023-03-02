@@ -25,7 +25,7 @@ public class Spawner : MonoBehaviour
 
         if(spawnTimer >= spawnTime)
         {
-            Instantiate(prefabToSpawn, Random.insideUnitSphere * spawnRange, Quaternion.identity, transform);
+            Instantiate(prefabToSpawn, Random.insideUnitCircle * spawnRange, Quaternion.identity, transform);
             spawnTimer = 0;
         }
     }
