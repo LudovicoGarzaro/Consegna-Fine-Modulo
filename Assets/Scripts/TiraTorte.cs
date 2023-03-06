@@ -11,7 +11,7 @@ public class TiraTorte : MonoBehaviour
    
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.O))
+        if (Input.GetKeyDown(KeyCode.L))
         {
             
             var torta = Instantiate(tortaPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);

@@ -4,19 +4,16 @@ using UnityEngine;
 
 public class Torta : MonoBehaviour
 {
-    
-    public float life = 3;
 
-    void Awake()
-    {
-        Destroy(gameObject, life);
-    }
-
+    [SerializeField] float Damage = 1f;
 
     void OnCollisionEnter(Collision collision)
-
     {
-        
+        if(collision.gameObject.TryGetComponent<Life>(out Life lifeComponent))
+        {
+            lifeComponent.TakeDamage(Damage);
+        }
+
         Destroy(gameObject);
     }
 }
