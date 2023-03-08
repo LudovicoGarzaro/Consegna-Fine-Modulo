@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Life : MonoBehaviour
 {
-    [SerializeField] float Health, maxHealth = 5f;
+    [SerializeField] int Health, maxHealth = 3;
 
     void Start()
     {
@@ -12,7 +12,7 @@ public class Life : MonoBehaviour
     }
 
     // Update is called once per frame
-    public void TakeDamage(float damageAmmount)
+    public void TakeDamage(int damageAmmount)
     {
         Health -= damageAmmount;
 

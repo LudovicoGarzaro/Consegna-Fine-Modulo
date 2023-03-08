@@ -5,15 +5,25 @@ using UnityEngine;
 public class Torta : MonoBehaviour
 {
 
-    [SerializeField] float Damage = 1f;
+
 
     void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.TryGetComponent<Life>(out Life lifeComponent))
+        if (collision.gameObject.TryGetComponent<Life>(out Life lifeComponent))
         {
-            lifeComponent.TakeDamage(Damage);
+            lifeComponent.TakeDamage(1);
         }
 
+        if (collision.collider.tag == "Player")
+        {
+
+
+            if (collision.gameObject.TryGetComponent<PlayerHealth>(out PlayerHealth playerlifeComponent))
+            {
+                playerlifeComponent.TakeDamagePlayer(1);
+            }
+        }
         Destroy(gameObject);
+
     }
 }
