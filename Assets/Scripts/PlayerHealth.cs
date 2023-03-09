@@ -10,6 +10,8 @@ public class PlayerHealth : MonoBehaviour
 
     public Healthbarsystem healthBar;
 
+    public GameObject deathscene;
+
     void Start()
     {
         currentHealth = maxHealth;
@@ -24,6 +26,12 @@ public class PlayerHealth : MonoBehaviour
         currentHealth -= damageAmmountPlayer;
 
         healthBar.SetHealth(currentHealth);
+
+        if(currentHealth <= 0)
+        {
+            deathscene.SetActive(true);
+            Time.timeScale = 0f;
+        }
 
     }
 

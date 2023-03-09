@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: "Assets/Scenes/Men\xF9 Principale.unity"
+    guid: 8f66e2985d7a64045ae7c73adfacf22e
+  - enabled: 1
+    path: Assets/Scenes/Gioco.unity
+    guid: 91a1e7421cb457e4daa955b22a64bf85
   m_configObjects: {}
